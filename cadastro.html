@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Candy Shop - Cadastro</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comic Sans MS', sans-serif; }
+        body { background-color: #fff5f7; color: #6b5367; }
+        header { background: linear-gradient(135deg, #ffe3ec 0%, #fff0f5 100%); padding: 20px; text-align: center; border-bottom: 4px dashed #ffd1dc; }
+        .logo-container { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px; }
+        .logo-text { font-size: 2.2rem; color: #ff85a2; font-weight: bold; }
+        
+        /* Menu corrigido */
+        nav a { text-decoration: none; color: #7b9acc; font-weight: bold; padding: 10px 20px; margin: 0 8px; border-radius: 20px; background-color: #fff; border: 2px solid #e2ece9; transition: all 0.3s; display: inline-block; }
+        nav a:hover, nav a.active { background-color: #ffccd5; color: #fff; border-color: #ffb3c1; }
+
+        .container { max-width: 500px; margin: 40px auto; padding: 0 20px; }
+        
+        .box-cadastro {
+            background-color: #fff;
+            border: 3px solid #ffccd5;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(255, 204, 213, 0.3);
+        }
+
+        .box-cadastro h2 { text-align: center; color: #ff85a2; margin-bottom: 25px; font-size: 1.8rem; }
+        .campo-grupo { margin-bottom: 18px; }
+        .campo-grupo label { display: block; margin-bottom: 6px; font-weight: bold; color: #7b9acc; font-size: 0.95rem; }
+        
+        .campo-grupo input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ffe3ec;
+            border-radius: 15px;
+            background-color: #fffbfd;
+            color: #6b5367;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .campo-grupo input:focus { border-color: #ff94b3; background-color: #fff; }
+
+        .btn-enviar {
+            background: linear-gradient(45deg, #ff94b3, #ffccd5);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 148, 179, 0.3);
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+
+        .btn-enviar:hover { transform: scale(1.02); box-shadow: 0 6px 15px rgba(255, 148, 179, 0.5); }
+        footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #bfa8bc; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 43,35 57,35" fill="#fff799" stroke="#f4e842" stroke-width="2"/>
+                <path d="M25,25 Q35,15 40,40 Z" fill="#ffccd5" />
+                <path d="M75,25 Q65,15 60,40 Z" fill="#ffccd5" />
+                <circle cx="50" cy="55" r="30" fill="#ffffff" stroke="#ffd1dc" stroke-width="3"/>
+                <path d="M33,55 Q40,62 43,55" fill="none" stroke="#6b5367" stroke-width="3" stroke-linecap="round"/>
+                <path d="M67,55 Q60,62 57,55" fill="none" stroke="#6b5367" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="30" cy="62" r="6" fill="#ff94b3" opacity="0.6"/>
+                <circle cx="70" cy="62" r="6" fill="#ff94b3" opacity="0.6"/>
+            </svg>
+            <span class="logo-text">Unicorn Candy</span>
+        </div>
+        <nav>
+            <a href="./">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="cadastro.html" class="active">Cadastro</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box-cadastro">
+            <h2>Criar Conta Mágica ✨</h2>
+            <form onsubmit="event.preventDefault(); alert('Cadastro realizado com sucesso! Bem-vindo ao reino! 🦄💖');">
+                <div class="campo-grupo">
+                    <label for="nome">Qual o seu nome?</label>
+                    <input type="text" id="nome" placeholder="Ex: Ana Clara" required>
+                </div>
+                <div class="campo-grupo">
+                    <label for="email">Seu Email Mágico</label>
+                    <input type="email" id="email" placeholder="Ex: seuemail@unicorn.com" required>
+                </div>
+                <div class="campo-grupo">
+                    <label for="senha">Crie uma Senha Secreta</label>
+                    <input type="password" id="senha" placeholder="Sua senha..." required>
+                </div>
+                <button type="submit" class="btn-enviar">Cadastrar! 🌟</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Unicorn Candy Shop - Feito com ✨ e 💖
+    </footer>
+
+</body>
+</html>
